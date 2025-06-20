@@ -1,0 +1,74 @@
+﻿button {
+    all: unset; /* Evita que otros estilos interfieran */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 20px;
+    color: white;
+    text-shadow: 2px 2px rgb(116, 116, 116);
+    text-transform: uppercase;
+    cursor: pointer;
+    border: solid 2px black;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 17px;
+    background-color: hsl(49deg 98% 60%);
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+.button-container {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+   
+}
+
+    button:active {
+        transform: scale(0.9);
+        transition: all 100ms ease;
+    }
+
+    button svg {
+        width: 36px;
+        height: 36px;
+        transition: all 0.5s ease;
+        z-index: 2;
+    }
+
+.play {
+    transition: all 0.5s ease;
+    transition-delay: 300ms;
+}
+
+button:hover svg {
+    transform: scale(3) translate(50%);
+}
+
+.now {
+    position: absolute;
+    left: 0;
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+    z-index: 2;
+}
+
+button:hover .now {
+    transform: translateX(10px);
+    transition-delay: 300ms;
+}
+
+button:hover .play {
+    transform: translateX(200%);
+    transition-delay: 300ms;
+}
+.paleteria-box {
+    font-family: 'Comic Sans MS', cursive;
+    background: linear-gradient(to bottom right, #fff3e0, #ffe0b2);
+    border: 3px dashed #ff7043;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
